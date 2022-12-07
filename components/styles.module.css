@@ -101,6 +101,10 @@
   color: #0066ff;
 }
 
+.discord:hover {
+  color: #5865f2;
+}
+
 .github:hover {
   color: #c9510c;
 }

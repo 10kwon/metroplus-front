@@ -50,8 +50,8 @@ export const isDev = environment === 'development'
 export const name: string = getSiteConfig('name')
 export const author: string = getSiteConfig('author')
 export const domain: string = getSiteConfig('domain')
-export const description: string = getSiteConfig('description', 'Notion Blog')
-export const language: string = getSiteConfig('language', 'en')
+export const description: string = getSiteConfig('description', '버덕과 철덕을 이음!')
+export const language: string = getSiteConfig('language', 'ko')
 
 // social accounts
 export const twitter: string | null = getSiteConfig('twitter', null)
@@ -61,6 +61,7 @@ export const youtube: string | null = getSiteConfig('youtube', null)
 export const linkedin: string | null = getSiteConfig('linkedin', null)
 export const newsletter: string | null = getSiteConfig('newsletter', null)
 export const zhihu: string | null = getSiteConfig('zhihu', null)
+export const discord: string | null = getSiteConfig('discord', null)
 
 export const getMastodonHandle = (): string | null => {
   if (!mastodon) {
