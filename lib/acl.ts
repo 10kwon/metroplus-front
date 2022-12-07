@@ -9,7 +9,7 @@ export async function pageAcl({
     return {
       error: {
         statusCode: 404,
-        message: 'Unable to resolve notion site'
+        message: '사이트 접근 불가'
       }
     }
   }
@@ -18,7 +18,7 @@ export async function pageAcl({
     return {
       error: {
         statusCode: 404,
-        message: `Unable to resolve page for domain "${site.domain}". Notion page "${pageId}" not found.`
+        message: `페이지 "${site.domain}" 해석 불가. 페이지 "${pageId}" 찾을 수 없음.`
       }
     }
   }
@@ -30,7 +30,7 @@ export async function pageAcl({
     return {
       error: {
         statusCode: 404,
-        message: `Unable to resolve page for domain "${site.domain}". Notion page "${pageId}" invalid data.`
+        message: `페이지 "${site.domain}" 해석 불가. 페이지 "${pageId}" 비정상 데이터.`
       }
     }
   }
@@ -47,7 +47,7 @@ export async function pageAcl({
       return {
         error: {
           statusCode: 404,
-          message: `Notion page "${pageId}" doesn't belong to the Notion workspace owned by "${site.domain}".`
+          message: `페이지 "${pageId}"는 "${site.domain}"에 미종속.`
         }
       }
     }

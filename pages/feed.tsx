@@ -59,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       config.description
     const url = getCanonicalPageUrl(config.site, recordMap)(pageId)
     const lastUpdatedTime = getPageProperty<number>(
-      'Last Updated',
+      '최종 수정 일자',
       block,
       recordMap
     )

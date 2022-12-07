@@ -2,24 +2,22 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '77564f6a971c45a4814b54f107603fa4',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: '메트로+',
+  domain: 'mp.injeonmetro.co.kr',
+  author: '(주)한인승',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: '상상이 현실로, 여기는 메트로+입니다.',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+discord: 'SfVUt3qc',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
@@ -42,24 +40,25 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
-
+   pageUrlOverrides: {
+     '/factcheck': '590f6c2b67de42c89a763f24edfc3af8',
+     '/rules': '0c8bbba3520542d7858545807a7bc14f'
+   },
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+   navigationStyle: 'custom',
+   navigationLinks: [
+     {
+       title: '규칙',
+       pageId: '0c8bbba3520542d7858545807a7bc14f'
+     },
+     {
+      title: '팩트체크',
+      pageId: '590f6c2b67de42c89a763f24edfc3af8'
+    },
+     {
+       title: '채용 바로가기',
+       pageId: 'a3e1c19a121f41dda06d7791621c9f40'
+     }
+   ]
 })

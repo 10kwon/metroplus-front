@@ -7,11 +7,11 @@ import { api, apiHost, rootNotionPageId } from '@/lib/config'
 import { NotionPageInfo } from '@/lib/types'
 
 const interRegularFontP = fetch(
-  new URL('../../public/fonts/Inter-Regular.ttf', import.meta.url)
+  new URL('../../public/fonts/IBMPlexSansKR-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const interBoldFontP = fetch(
-  new URL('../../public/fonts/Inter-SemiBold.ttf', import.meta.url)
+  new URL('../../public/fonts/IBMPlexSansKR-SemiBold.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export const config = {
@@ -22,7 +22,7 @@ export default async function OGImage(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const pageId = searchParams.get('id') || rootNotionPageId
   if (!pageId) {
-    return new Response('Invalid notion page id', { status: 400 })
+    return new Response('옳지 않은 ID', { status: 400 })
   }
 
   const pageInfoRes = await fetch(`${apiHost}${api.getNotionPageInfo}`, {
@@ -91,8 +91,6 @@ export default async function OGImage(req: NextRequest) {
             height: 465,
             display: 'flex',
             flexDirection: 'column',
-            border: '16px solid rgba(0,0,0,0.3)',
-            borderRadius: 8,
             zIndex: '1'
           }}
         >
